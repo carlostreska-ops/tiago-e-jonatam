@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --cor-fundo: #050505;        /* Preto muito profundo */
+    --cor-principal: #121212;    /* Preto levemente elevado para os cards */
+    --cor-secundaria: #2b0000;   /* Tom vinho/vermelho escuro para botões */
+    --cor-destaque: #e60000;     /* Vermelho vívido para elementos interativos */
+    --cor-texto: #f5f5f5;        /* Branco suave para excelente legibilidade */
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #330000;
+    box-shadow: 0 0 25px rgba(230, 0, 0, 0.2);
+}
+
+h1, .caixa-perguntas, .caixa-resultado {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+h1 {
+    color: var(--cor-destaque);
+    text-shadow: 0 0 10px rgba(230, 0, 0, 0.4);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.caixa-perguntas {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-destaque);
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: #000000;
+    box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
